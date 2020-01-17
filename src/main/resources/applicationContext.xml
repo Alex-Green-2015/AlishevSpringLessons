@@ -7,8 +7,11 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="musicBean"
-          class="ru.avi.springLesson2.RockMusic">
+    <bean id="musicBean" class="ru.avi.springLesson2.ClassicalMusic">
+    </bean>
+
+    <bean id="musicPlayer" class="ru.avi.springLesson2.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
     </bean>
 
 
