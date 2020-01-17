@@ -8,15 +8,11 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
-        TestBean myTest = context.getBean(MyBean.class);
-        MyBean myNew = context.getBean(MyBean.class);
-        myNew.setName("343434");
-        System.out.println(myNew.getRow());
-        context.getBean(MyBean.class).setRow("d33d");
-        System.out.println(myTest.getName());
-        System.out.println(myNew.getName());
-        System.out.println(myNew.getRow());
-        context.getBean(MyBean.class);
+        Music music = context.getBean("musicBean", Music.class);
+        MusicPlayer musicPlayer = new MusicPlayer(music);
+        musicPlayer.playMusic();
+
+
 
 
 
