@@ -8,13 +8,15 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
+    <context:component-scan base-package="ru.avi.springLesson2"/>
 
-    <bean id="classicalMusicBean"
-          class="ru.avi.springLesson2.ClassicalMusic"
-          factory-method="getClassicalMusic"
-          init-method="doMyInit"
-          destroy-method="doMyDestroy">
-    </bean>
+
+<!--    <bean id="classicalMusicBean"-->
+<!--          class="ru.avi.springLesson2.ClassicalMusic"-->
+<!--          factory-method="getClassicalMusic"-->
+<!--          init-method="doMyInit"-->
+<!--          destroy-method="doMyDestroy">-->
+<!--    </bean>-->
 
 
 <!--    <bean id="rapMusicBean" class="ru.avi.springLesson2.RapMusic">-->

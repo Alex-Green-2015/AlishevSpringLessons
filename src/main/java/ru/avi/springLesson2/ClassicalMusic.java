@@ -1,8 +1,10 @@
 package ru.avi.springLesson2;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ClassicalMusic implements Music{
-    private ClassicalMusic(){
-    }
+    private ClassicalMusic(){ }
 
     public static ClassicalMusic getClassicalMusic(){
         System.out.println("NewFactory");
