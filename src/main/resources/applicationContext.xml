@@ -16,7 +16,8 @@
     <bean id="rockMusicBean" class="ru.avi.springLesson2.RockMusic">
     </bean>
 
-    <bean id="musicPlayer" class="ru.avi.springLesson2.MusicPlayer">
+    <bean id="musicPlayer" class="ru.avi.springLesson2.MusicPlayer"
+            scope="prototype">
         <property name="musicList">
             <list>
                 <ref bean="classicalMusicBean"/>
