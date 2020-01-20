@@ -1,25 +1,29 @@
 package ru.avi.springLesson2;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @Component
 public class ClassicalMusic implements Music{
-    private ClassicalMusic(){ }
 
-    public static ClassicalMusic getClassicalMusic(){
-        System.out.println("NewFactory");
-         return new ClassicalMusic();
-    }
+    String[] songs = {"Symphony #5","Hungarian Rhapsody","Nocturnes, Op. 9"};
 
+    @PostConstruct
     public void doMyInit(){
-        System.out.println("doing my initialization");
+        System.out.println("Doing my Initialization");
     }
+
+    @PreDestroy
     public void doMyDestroy(){
-            System.out.println("doing my destruction");
+        System.out.println("Doing my Destruction");
     }
 
     @Override
-    public String getSong() {
-        return "Hungarian Rhapsody  ";
+    public String[] getSongs() {
+        return songs;
     }
+
 }

@@ -1,8 +1,12 @@
 package ru.avi.springLesson2;
 
 public class RapMusic implements Music{
+
+    String[] songs = {"Niggas Paradise"};
+
     @Override
-    public String getSong() {
-        return "Niggas Paradise";
+    public String[] getSongs() {
+        return songs;
     }
+
 }

@@ -4,8 +4,10 @@ import org.springframework.stereotype.Component;
 
 @Component("someRock")
 public class RockMusic implements Music{
+    String[] songs = {"Somewhere I  belong","Wind of changes","We will rock You"};
+
     @Override
-    public String getSong() {
-        return "Wind of changes";
+    public String[] getSongs() {
+        return songs;
     }
 }
