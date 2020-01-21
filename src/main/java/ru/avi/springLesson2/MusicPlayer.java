@@ -1,18 +1,13 @@
 package ru.avi.springLesson2;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@Component
 public class MusicPlayer {
 
-    private Music classic;
+    private List<Music> genre;
     private Music rock;
 
     @Value("${player.name}")
@@ -30,25 +25,17 @@ public class MusicPlayer {
         return volume;
     }
 
-    @Autowired
-    public MusicPlayer(@Qualifier("someRock")Music rock,
-                       @Qualifier("classicalMusic")Music classic) {
-        this.classic = classic;
-        this.rock = rock;
+    public MusicPlayer(List<Music> genre) {
+        this.genre = genre;
     }
 
-    public void playMusic(Genre genre) {
+    public void playMusic() {
         Random random = new Random();
-        switch (genre){
-            case ROCK:
-                System.out.println(rock.getSongs()[random.nextInt(3)]);
-                break;
-            case CLASSICAL:
-                System.out.println(classic.getSongs()[random.nextInt(3)]);
-                break;
-            default:
-                System.out.println("No such Genre");;
-        }
-
+//        for(Music music:genre){
+//            System.out.println(music.getSongs()[random.nextInt(3)]);
+//        }
+        int i = random.nextInt(genre.size());
+        System.out.println(i + " -- ");
+        System.out.println(genre.get(i).getSongs()[random.nextInt(3)]);
     }
 }

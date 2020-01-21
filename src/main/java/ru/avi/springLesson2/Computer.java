@@ -2,7 +2,6 @@ package ru.avi.springLesson2;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class Computer {
     private int id;
     private MusicPlayer musicPlayer;
@@ -14,9 +13,6 @@ public class Computer {
 
     @Override
     public String toString() {
-        System.out.println("Computer " + id + "\n");
-        musicPlayer.playMusic(Genre.CLASSICAL);
-        musicPlayer.playMusic(Genre.ROCK);
-        return "";
+        return "Computer " + id + "\n";
     }
 }

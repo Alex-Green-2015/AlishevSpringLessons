@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
 public class ClassicalMusic implements Music{
 
     String[] songs = {"Symphony #5","Hungarian Rhapsody","Nocturnes, Op. 9"};
