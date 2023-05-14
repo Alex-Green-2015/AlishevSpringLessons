@@ -6,8 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springapp2" />
+        <module name="les_6" />
+        <module name="les_8" />
+        <module name="les_7" />
+        <module name="les_2" />
+        <module name="les_1" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="les_1" target="1.7" />
+      <module name="les_2" target="1.7" />
+      <module name="les_6" target="1.7" />
+      <module name="les_7" target="1.7" />
+      <module name="les_8" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
