@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/les_1" />
-    <file type="web" url="file://$PROJECT_DIR$/les_2" />
-    <file type="web" url="file://$PROJECT_DIR$/les_6" />
-    <file type="web" url="file://$PROJECT_DIR$/les_7" />
-    <file type="web" url="file://$PROJECT_DIR$/les_8" />
+    <file type="web" url="file://$PROJECT_DIR$" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -15,6 +11,7 @@
         <option value="$PROJECT_DIR$/les_6/pom.xml" />
         <option value="$PROJECT_DIR$/les_7/pom.xml" />
         <option value="$PROJECT_DIR$/les_8/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
