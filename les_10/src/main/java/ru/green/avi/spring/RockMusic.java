@@ -11,8 +11,7 @@ public class RockMusic implements Music {
     List<String> songList = Arrays.asList("Rock 1", "Rock 2", "Rock 3");
 
     @Override
-    public String getSong() {
-        Random random = new Random();
-        return songList.get(random.nextInt(songList.size()));
+    public List<String> getSongs() {
+        return songList;
     }
 }
