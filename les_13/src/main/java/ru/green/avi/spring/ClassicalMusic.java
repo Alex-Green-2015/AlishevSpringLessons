@@ -16,17 +16,9 @@ public class ClassicalMusic implements Music {
         return songList;
     }
 
-    public void doMyInit() {
-        System.out.println("Doing my initialization" + this.toString());
-    }
-
     @PostConstruct
     public void doMyInit2() {
         System.out.println("Doing my initialization PRE" + this.toString());
-    }
-
-    public void doMyDestroy() {
-        System.out.println("Doing my destruction" + this.toString());
     }
 
     @PreDestroy
