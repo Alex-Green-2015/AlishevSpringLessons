@@ -7,7 +7,6 @@ import javax.annotation.PreDestroy;
 import java.util.Arrays;
 import java.util.List;
 
-@Component("someClassicalMusic")
 public class ClassicalMusic implements Music {
     List<String> songList = Arrays.asList("Classical 1", "Classical 2", "Classical 3");
 
