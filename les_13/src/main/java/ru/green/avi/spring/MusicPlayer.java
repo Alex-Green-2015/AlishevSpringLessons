@@ -1,47 +1,20 @@
 package ru.green.avi.spring;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.Random;
 
 public class MusicPlayer {
+    private List<Music> musicList;
 
-    @Value("${musicPlayer.name}")
-    private String name;
-
-    @Value("${musicPlayer.volume}")
-    private int volume;
-
-    private Music classicalMusic;
-    private Music rockMusic;
-
-    public String getName() {
-        return name;
+    public MusicPlayer(List<Music> musicList) {
+        this.musicList = musicList;
     }
 
-    public int getVolume() {
-        return volume;
-    }
-
-    public MusicPlayer(@Qualifier("someRockMusic") Music music1,
-                        @Qualifier("someClassicalMusic") Music music2) {
-        this.classicalMusic = music1;
-        this.rockMusic = music2;
-    }
-
-    public void playMusic(MusicGenre genre) {
+    public void playMusic() {
         Random random = new Random();
-        List<String> songs;
-        if (MusicGenre.ROCK.equals(genre)) {
-            songs = rockMusic.getSongs();
-            System.out.println("Playing RO: " + songs.get(random.nextInt(songs.size())));
-        } else {
-            songs = classicalMusic.getSongs();
-            System.out.println("Playing CL: " + songs.get(random.nextInt(songs.size())));
+        Music randomGenre = musicList.get(random.nextInt(musicList.size()));
+        for (String song : randomGenre.getSongs()) {
+            System.out.println(song);
         }
     }
 

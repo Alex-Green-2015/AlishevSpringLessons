@@ -1,7 +1,5 @@
 package ru.green.avi.spring;
 
-import org.springframework.stereotype.Component;
-
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.Arrays;
@@ -15,13 +13,4 @@ public class ClassicalMusic implements Music {
         return songList;
     }
 
-    @PostConstruct
-    public void doMyInit2() {
-        System.out.println("Doing my initialization PRE" + this.toString());
-    }
-
-    @PreDestroy
-    public void doMyDestroy2() {
-        System.out.println("Doing my destruction DE" + this.toString());
-    }
 }
