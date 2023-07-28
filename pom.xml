@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>les_10</module>
+        <module>les_20s</module>
     </modules>
     <packaging>pom</packaging>
 
