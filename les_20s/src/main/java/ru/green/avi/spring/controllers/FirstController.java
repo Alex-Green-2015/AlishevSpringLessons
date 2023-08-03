@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 
+
 @Controller
 @RequestMapping("/first")
 public class FirstController {
@@ -16,38 +17,32 @@ public class FirstController {
     public String helloPage(HttpServletRequest request,
                             Model model) {
 
-        String a = request.getParameter("a");
-        String b = request.getParameter("b");
-        String action = request.getParameter("action");
-
         try {
-            double firstParam = Double.parseDouble(a);
-            double secondParam = Double.parseDouble(b);
-            double response;
+            int a = Integer.parseInt(request.getParameter("a"));
+            int b = Integer.parseInt(request.getParameter("b"));
+            String action = request.getParameter("action");
+            double result;
 
             switch (action) {
                 case "multiplication":
-                    response = firstParam * secondParam;
-                    model.addAttribute("response", Double.toString(response));
+                    result = a * b;
                     break;
                 case "addition":
-                    response = firstParam + secondParam;
-                    model.addAttribute("response", Double.toString(response));
+                    result = a + b;
                     break;
                 case "subtraction":
-                    response = firstParam - secondParam;
-                    model.addAttribute("response", Double.toString(response));
+                    result = a - b;
                     break;
                 case "division":
-                    response = firstParam / secondParam;
-                    model.addAttribute("response", Double.toString(response));
+                    result = a / (double) b;
                     break;
                 default:
                     throw new RuntimeException();
             }
+            model.addAttribute("response", result);
+
         } catch (RuntimeException e) {
-            String response = "Error. Input data is incorrect";
-            model.addAttribute("response", response);
+            model.addAttribute("response", "Please, enter valid input data");
         }
 
         return "first/calculation";
