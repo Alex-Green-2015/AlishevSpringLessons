@@ -10,6 +10,7 @@
     <modules>
         <module>les_10</module>
         <module>les_20s</module>
+        <module>les_21</module>
     </modules>
     <packaging>pom</packaging>
 
